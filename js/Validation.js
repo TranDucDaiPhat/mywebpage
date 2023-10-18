@@ -129,4 +129,7 @@ function SubmitForm(){
       alert("Bạn chưa nhập đủ thông tin!");
       return false;
     }
+  else {
+    alert("Tạo tài khoản thành công!");
+  }
 }
