@@ -71,17 +71,20 @@ function KiemTraNgaySinh(idCheck, idNgay){
 
   // Tuổi phải lớn hơn 10
 
-  var ns = new Date(document.getElementById(idNgay).value);  
-  var today = new Date();
-  if(ns != "Invalid Date"){    
-    if(eval(today.getFullYear() - ns.getFullYear() <= 10)){
-      idCheck.innerText = "Tuổi phải lớn hơn 10";
-      return false;
-    } else {
-      idCheck.innerText = "";
-      return true;
+  if(document.getElementById(idNgay) != null){
+    var ns = new Date(document.getElementById(idNgay).value);  
+    var today = new Date();
+    if(ns != "Invalid Date"){    
+      if(eval(today.getFullYear() - ns.getFullYear() <= 10)){
+        idCheck.innerText = "Tuổi phải lớn hơn 10";
+        return false;
+      } else {
+        idCheck.innerText = "";
+        return true;
+      }
     }
   }
+  return true;
 }
 
 function KiemTraSDT(){
